@@ -1,1 +1,1 @@
-vedika_portfolio link :- vedikapatidar.netlify.app
+vedika_portfolio link :- https://vedikapatidar.netlify.app/
