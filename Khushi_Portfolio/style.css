@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 80px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.certificate, .services, .experiences, .projects, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.certificate .cer-content,
+.services .serv-content,
+.experiences .experiences-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 100px;
+    height: 4px;
+    background: #FF6F61;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #FF6F61;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.button1{
+    margin-top: 20px;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #FF6F61;
+}
+.button1:hover{
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+}
+.button2{
+    display: inline-block;
+    background: #FF6F61;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #FF6F61;
+    transition: all 0.3s ease;
+}
+.button2:hover{
+    color: #FF6F61;
+    background: none;
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #111F4D;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #FF6F61;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #FF6F61;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background-color: #111F4D;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .hero-img {
+    padding: 30px;
+    margin-left: 200px;
+    transform: translateX(150%);
+    animation: hero-img-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes hero-img-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 26px;
+}
+.home .home-content .text-2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 24px;
+    margin: 5px 0;
+}
+.home .home-content .text-4{
+    height: 135px;
+    width: 501px;
+}
+.home .home-content .text-4 p{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 10px;
+    text-align: justify;
+}
+.home .home-content a{
+    display: inline-block;
+    background: #FF6F61;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #FF6F61;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: #FF6F61;
+    background: none;
+}
+
+/* Services section styling */
+.services .serv-content .card{
+    width: calc(33% - 16px);
+    background: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    box-shadow: 0px 4px 6px 0px rgba(179, 177, 177, 0.8);
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .serv-content .card .box p{
+    text-align: justify;
+}
+
+/* Experience section styling */
+.experiences {
+    padding: 50px 0;
+    justify-content: center;
+}
+
+.experiences .title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.experiences .experiences-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experiences .expcont {
+    display: flex;
+    background-color: #F0F3FF;
+    border-radius: 8px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.experiences .expcont .number h1 {
+    font-size: 80px;
+    color: #000;
+    margin-right: 46px;
+    font-weight: 500;
+}
+
+.experiences .expcont .content {
+    flex: 1;
+}
+
+.experiences .expcont .content h3 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.experiences .expcont .content span {
+    display: block;
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.experiences .expcont .content p {
+    font-size: 20px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.experiences .expcont .content ul {
+    width: 1000px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experiences .expcont .content ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experiences .expcont .content a {
+    color: #111F4D;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.experiences .expcont .content a:hover {
+    text-decoration: underline;
+}
+.experiences .expcont .content .title-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.experiences .expcont .content .title-date span {
+    font-size: 20px;
+    color: #666;
+}
+
+.experiences .expcont .content .title-date .date {
+    font-size: 20px;
+    color: #999;
+    text-align: right;
+}
+
+/* projects section styling */
+.projects .carousel .card {
+    width: 330px; 
+    height: 360px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0px 4px 6px 0px rgba(179, 177, 177, 0.8);
+    text-align: center;
+    overflow: hidden;
+    margin: 10px; 
+}
+
+.projects .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.projects .carousel .card .box img {
+    width: 330px;
+    height: 240px;
+    border-radius: 6px;
+}
+
+.projects .carousel .card .text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.projects .carousel .card .text h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin: 5px 0;
+}
+
+.projects .carousel .card .text p {
+    font-size: 18px;
+    color: #777;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid #111F4D !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: #111F4D !important;
+}
+
+.projects a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+/* certificate section styling */
+.certificate .cer-content {
+    display: flex;
+    justify-content: center;
+    gap: 61px; 
+}
+.certificate .cer-content .card{
+    display: flex;
+    height: 360px;
+    width: 330px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px 0px rgba(179, 177, 177, 0.8);
+    overflow: hidden;
+    margin: 10px;
+}
+.certificate .cer-content .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.certificate .cer-content .card img{
+    width: 330px;
+    height: 240px;
+}
+.certificate .cer-content .card .box .text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.certificate .cer-content .card .box .text h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin: 5px 0;
+}
+
+.certificate .cer-content .card .box .text p {
+    font-size: 18px;
+    color: #777;
+}
+
+
+/* contact section styling */
+.contact {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #e74c3c;
+}
+
+.send-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.send-btn:hover {
+    background-color: #d62c1a;
+}
+
+/* footer section styling */
+footer {
+    background: #111;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer .max-width p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.resume-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resume-btn:hover {
+    background-color: #d62c1a;
+}
+
+.hover-links {
+    margin-top: 20px;
+}
+
+.hover-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.hover-links a:hover {
+    color: #e74c3c;
+}
+
+
+/* responsive media query start */
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .certificate .cer-content .column{
+        width: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .experiences .experiences-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
